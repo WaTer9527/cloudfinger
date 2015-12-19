@@ -15,11 +15,12 @@
 	    
 	    <ImageButton 
 	        android:id="@+id/id_tab_home_img"
-	        android:layout_width="30dp"
-	        android:layout_height="30dp"
-	        android:src="@drawable/icon_home"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
+	        android:src="@drawable/icon_home_press"
 			android:scaleType="centerInside"	        
-	        android:background="#0000"/>
+	        android:background="#0000"
+	        android:clickable="false"/>
 	    <TextView 
 	        android:text="首页"
 	        android:layout_width="wrap_content"
@@ -36,11 +37,12 @@
 	    
 	    <ImageButton 
 	        android:id="@+id/id_tab_message_img"
-	        android:layout_width="30dp"
-	        android:layout_height="30dp"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
 	        android:src="@drawable/icon_message"
 			android:scaleType="centerInside"	        
-	        android:background="#0000"/>
+	        android:background="#0000"
+	        android:clickable="false"/>
 	    <TextView 
 	        android:text="交流"
 	        android:layout_width="wrap_content"
@@ -57,11 +59,12 @@
 	    
 	    <ImageButton 
 	        android:id="@+id/id_tab_knowledge_img"
-	        android:layout_width="30dp"
-	        android:layout_height="30dp"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
 	        android:src="@drawable/icon_books"
 			android:scaleType="centerInside"	        
-	        android:background="#0000"/>
+	        android:background="#0000"
+	        android:clickable="false"/>
 	    <TextView 
 	        android:text="知识"
 	        android:layout_width="wrap_content"
@@ -78,11 +81,12 @@
 	    
 	    <ImageButton 
 	        android:id="@+id/id_tab_mine_img"
-	        android:layout_width="30dp"
-	        android:layout_height="30dp"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
 	        android:src="@drawable/icon_user"
 			android:scaleType="centerInside"	        
-	        android:background="#0000"/>
+	        android:background="#0000"
+	        android:clickable="false"/>
 	    <TextView 
 	        android:text="我的"
 	        android:layout_width="wrap_content"
@@ -99,11 +103,12 @@
 	    
 	    <ImageButton 
 	        android:id="@+id/id_tab_settings_img"
-	        android:layout_width="30dp"
-	        android:layout_height="30dp"
+	        android:layout_width="25dp"
+	        android:layout_height="25dp"
 	        android:src="@drawable/icon_gear"
 			android:scaleType="centerInside"	        
-	        android:background="#0000"/>
+	        android:background="#0000"
+	        android:clickable="false"/>
 	    <TextView 
 	        android:text="设置"
 	        android:layout_width="wrap_content"
