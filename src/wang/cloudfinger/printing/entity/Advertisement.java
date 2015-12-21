@@ -1,4 +1,4 @@
-package wang.cloudfinger.printing.model;
+package wang.cloudfinger.printing.entity;
 
 public class Advertisement {
 	private String imgUrl;

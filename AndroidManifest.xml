@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name=".WelcomeActivity"
+            android:name="wang.cloudfinger.printing.activity.WelcomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name=".MainActivity">
+            android:name="wang.cloudfinger.printing.activity.MainActivity">
             
         </activity>
     </application>
