@@ -3,12 +3,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <include layout="@layout/banner"/>
+
+    <include
+        layout="@layout/banner" />
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="80dp"
+	    android:orientation="horizontal">
+	    <LinearLayout 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:orientation="vertical">
+	        <ImageButton 
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:src="@drawable/advertising"
+	            android:scaleType="centerInside"/>
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="广告投放"/>
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:orientation="vertical">
+	        <ImageButton 
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:src="@drawable/printing"
+	            android:scaleType="centerInside"/>
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="印刷印务"/>
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:orientation="vertical">
+	        <ImageButton 
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:src="@drawable/bid"
+	            android:scaleType="centerInside"/>
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="投标竞标"/>
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:orientation="vertical">
+	        <ImageButton 
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:src="@drawable/hobby"
+	            android:scaleType="centerInside"/>
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="印刷周边"/>
+	    </LinearLayout>
+	   
+	</LinearLayout>
 	<TextView 
 	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:gravity="center"
-	    android:textSize="30sp"
-	    android:textStyle="bold"
-	    android:text="主页页面"/>
+	    android:layout_height="35dp"
+	    android:background="#ddd"
+	    android:gravity="center_vertical"
+	    android:paddingLeft="10dp"
+	    android:text="云指信息"
+	    android:textSize="18sp"
+	    android:textColor="#777"/>
+	<ListView 
+	    android:id="@+id/listView_news"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    
+	</ListView>
 </LinearLayout>
