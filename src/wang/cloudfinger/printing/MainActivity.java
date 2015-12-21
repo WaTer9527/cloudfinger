@@ -1,17 +1,17 @@
 package wang.cloudfinger.printing;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends FragmentActivity implements OnClickListener {
 
 	private LinearLayout tabHome;
 	private LinearLayout tabMessage;
@@ -94,7 +94,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	private void setSelect(int i){
-		FragmentManager fragmentManager = getFragmentManager();
+		FragmentManager fragmentManager = getSupportFragmentManager();
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		hideFragment(fragmentTransaction);
 		switch (i) {
