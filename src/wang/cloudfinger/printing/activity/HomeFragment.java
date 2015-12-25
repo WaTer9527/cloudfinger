@@ -15,6 +15,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,8 +26,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.ListView;
@@ -75,6 +78,12 @@ public class HomeFragment extends Fragment {
 	private ListView listViewNews;
 	ArrayAdapter<String> adapter;
 	
+	//=========Ìø×ªÁ´½Ó=========
+	private ImageButton imgAdvertising;
+	private ImageButton imgPrinting;
+	private ImageButton imgBid;
+	private ImageButton imgHobby;
+	
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -122,6 +131,43 @@ public class HomeFragment extends Fragment {
 		dots.add(dot2);
 		dots.add(dot3);
 		dots.add(dot4);
+		
+		imgAdvertising = (ImageButton) homeView.findViewById(R.id.img_advertising);
+		imgPrinting = (ImageButton) homeView.findViewById(R.id.img_printing);
+		imgBid = (ImageButton) homeView.findViewById(R.id.img_bid);
+		imgHobby = (ImageButton) homeView.findViewById(R.id.img_hobby);
+		
+		imgAdvertising.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				gotoAdvertisingActivity();
+			}
+		});
+		
+		imgPrinting.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				gotoPrintingActivity();
+			}
+		});
+		
+		imgBid.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				gotoBidActivity();
+			}
+		});
+		
+		imgHobby.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				gotoHobbyActivity();
+			}
+		});
 		
 		adList = getBannerAd();
 		
@@ -224,6 +270,26 @@ public class HomeFragment extends Fragment {
 				.cacheInMemory(true).cacheOnDisc(true)
 				.bitmapConfig(Bitmap.Config.RGB_565)
 				.imageScaleType(ImageScaleType.EXACTLY).build();
+	}
+
+	protected void gotoHobbyActivity() {
+		Intent intent = new Intent(this.getActivity(), HobbyActivity.class);
+		startActivity(intent);
+	}
+
+	protected void gotoBidActivity() {
+		Intent intent = new Intent(this.getActivity(), BidActivity.class);
+		startActivity(intent);
+	}
+
+	protected void gotoPrintingActivity() {
+		Intent intent = new Intent(this.getActivity(), PrintingActivity.class);
+		startActivity(intent);
+	}
+
+	protected void gotoAdvertisingActivity() {
+		Intent intent = new Intent(this.getActivity(), AdvertisingActivity.class);
+		startActivity(intent);
 	}
 
 	private String getNewsTypeName(int type) {

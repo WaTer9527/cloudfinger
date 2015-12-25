@@ -17,10 +17,12 @@
 	        android:gravity="center"
 	        android:orientation="vertical">
 	        <ImageButton 
+	            android:id="@+id/img_advertising"
 	            android:layout_width="50dp"
 	            android:layout_height="50dp"
 	            android:src="@drawable/advertising"
-	            android:scaleType="centerInside"/>
+	            android:scaleType="centerInside"
+	            android:contentDescription="广告投放"/>
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
@@ -33,10 +35,12 @@
 	        android:gravity="center"
 	        android:orientation="vertical">
 	        <ImageButton 
+	            android:id="@+id/img_printing"
 	            android:layout_width="50dp"
 	            android:layout_height="50dp"
 	            android:src="@drawable/printing"
-	            android:scaleType="centerInside"/>
+	            android:scaleType="centerInside"
+	            android:contentDescription="印刷印务"/>
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
@@ -49,10 +53,12 @@
 	        android:gravity="center"
 	        android:orientation="vertical">
 	        <ImageButton 
+	            android:id="@+id/img_bid"
 	            android:layout_width="50dp"
 	            android:layout_height="50dp"
 	            android:src="@drawable/bid"
-	            android:scaleType="centerInside"/>
+	            android:scaleType="centerInside"
+	            android:contentDescription="投标竞标"/>
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
@@ -65,10 +71,12 @@
 	        android:gravity="center"
 	        android:orientation="vertical">
 	        <ImageButton 
+	            android:id="@+id/img_hobby"
 	            android:layout_width="50dp"
 	            android:layout_height="50dp"
 	            android:src="@drawable/hobby"
-	            android:scaleType="centerInside"/>
+	            android:scaleType="centerInside"
+	            android:contentDescription="印刷周边"/>
 	        <TextView 
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
