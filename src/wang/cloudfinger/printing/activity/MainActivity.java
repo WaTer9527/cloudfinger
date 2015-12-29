@@ -88,7 +88,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		case R.id.id_tab_settings:
 			setSelect(4);
 			break;
-
+		case R.id.img_advertising:
+			setSelect(5);
+			break;
 		default:
 			break;
 		}

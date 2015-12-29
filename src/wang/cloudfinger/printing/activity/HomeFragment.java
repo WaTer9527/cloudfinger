@@ -38,16 +38,9 @@ import wang.cloudfinger.printing.R;
 import wang.cloudfinger.printing.adapter.BannerPageAdapter;
 import wang.cloudfinger.printing.entity.Advertisement;
 import wang.cloudfinger.printing.entity.News;
+import wang.cloudfinger.printing.utils.Constants;
 
 public class HomeFragment extends Fragment {
-	
-	public static String IMAGE_CACHE_PATH = "imageLoader/cache";
-	
-	public final static int NEWS_TYPE_REGISTER = 0;
-	public final static int NEWS_TYPE_ADVERTISING = 1;
-	public final static int NEWS_TYPE_PRINTING = 2;
-	public final static int NEWS_TYPE_BID = 3;
-	public final static int NEWS_TYPE_HOBBY = 4;
 	
 	private View homeView;
 	//=========Banner=========
@@ -144,7 +137,7 @@ public class HomeFragment extends Fragment {
 				gotoAdvertisingActivity();
 			}
 		});
-		
+
 		imgPrinting.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -249,7 +242,7 @@ public class HomeFragment extends Fragment {
 	
 	private void initImageLoader() {
 		File cacheDir = com.nostra13.universalimageloader.utils.StorageUtils
-				.getOwnCacheDirectory(this.getActivity(), IMAGE_CACHE_PATH);
+				.getOwnCacheDirectory(this.getActivity(), Constants.IMAGE_CACHE_PATH);
 		DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
 				.cacheInMemory(true).cacheOnDisc(true).build();
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this.getActivity())
@@ -271,6 +264,11 @@ public class HomeFragment extends Fragment {
 				.bitmapConfig(Bitmap.Config.RGB_565)
 				.imageScaleType(ImageScaleType.EXACTLY).build();
 	}
+	
+	protected void gotoAdvertisingActivity() {
+		Intent intent = new Intent(this.getActivity(), AdvertisingActivity.class);
+		startActivity(intent);
+	}
 
 	protected void gotoHobbyActivity() {
 		Intent intent = new Intent(this.getActivity(), HobbyActivity.class);
@@ -287,31 +285,26 @@ public class HomeFragment extends Fragment {
 		startActivity(intent);
 	}
 
-	protected void gotoAdvertisingActivity() {
-		Intent intent = new Intent(this.getActivity(), AdvertisingActivity.class);
-		startActivity(intent);
-	}
-
 	private String getNewsTypeName(int type) {
 		String typeName = null;
 		switch (type) {
-		case NEWS_TYPE_REGISTER:
+		case Constants.NEWS_TYPE_REGISTER:
 			typeName = "云指印务";
 			break;
 
-		case NEWS_TYPE_ADVERTISING:
+		case Constants.NEWS_TYPE_ADVERTISING:
 			typeName = "广告投放";
 			break;
 
-		case NEWS_TYPE_PRINTING:
+		case Constants.NEWS_TYPE_PRINTING:
 			typeName = "印刷印务";
 			break;
 
-		case NEWS_TYPE_BID:
+		case Constants.NEWS_TYPE_BID:
 			typeName = "投标竞标";
 			break;
 
-		case NEWS_TYPE_HOBBY:
+		case Constants.NEWS_TYPE_HOBBY:
 			typeName = "印刷周边";
 			break;
 
@@ -371,39 +364,39 @@ public class HomeFragment extends Fragment {
 	private String[] initNews() {
 		List<News> newsList = new ArrayList<News>();
 		News news1 = new News();
-		news1.setType(NEWS_TYPE_REGISTER);
+		news1.setType(Constants.NEWS_TYPE_REGISTER);
 		news1.setDescription("南阳豫南广告公司加入");
 		newsList.add(news1);
 		News news2 = new News();
-		news2.setType(NEWS_TYPE_BID);
+		news2.setType(Constants.NEWS_TYPE_BID);
 		news2.setDescription("邓州市李总1万张名片印刷");
 		newsList.add(news2);
 		News news3 = new News();
-		news3.setType(NEWS_TYPE_ADVERTISING);
+		news3.setType(Constants.NEWS_TYPE_ADVERTISING);
 		news3.setDescription("新野公交车集团15路车体广告");
 		newsList.add(news3);
 		News news4 = new News();
-		news4.setType(NEWS_TYPE_BID);
+		news4.setType(Constants.NEWS_TYPE_BID);
 		news4.setDescription("南阳市卧龙区云指印务大厦楼顶霓虹灯制作");
 		newsList.add(news4);
 		News news5 = new News();
-		news5.setType(NEWS_TYPE_ADVERTISING);
+		news5.setType(Constants.NEWS_TYPE_ADVERTISING);
 		news5.setDescription("南阳市李先生车辆后窗广告位招商 每月800元");
 		newsList.add(news5);
 		News news6 = new News();
-		news6.setType(NEWS_TYPE_HOBBY);
+		news6.setType(Constants.NEWS_TYPE_HOBBY);
 		news6.setDescription("南阳市体校学生暑假工找工作 每天50元");
 		newsList.add(news6);
 		News news7 = new News();
-		news7.setType(NEWS_TYPE_REGISTER);
+		news7.setType(Constants.NEWS_TYPE_REGISTER);
 		news7.setDescription("邓州市枫林广告设计公司加入");
 		newsList.add(news7);
 		News news8 = new News();
-		news8.setType(NEWS_TYPE_PRINTING);
+		news8.setType(Constants.NEWS_TYPE_PRINTING);
 		news8.setDescription("蛋糕包装盒印刷制作500个");
 		newsList.add(news8);
 		News news9 = new News();
-		news9.setType(NEWS_TYPE_ADVERTISING);
+		news9.setType(Constants.NEWS_TYPE_ADVERTISING);
 		news9.setDescription("我想在南阳火车站投放广告");
 		newsList.add(news9);
 		

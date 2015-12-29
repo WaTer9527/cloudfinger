@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <include layout="@layout/top_bar"/>
-    <FrameLayout 
-        android:id="@+id/id_advertising"
+    <include
+        layout="@layout/banner" />
+    <TextView 
+        android:layout_height="0sp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        
-    </FrameLayout>
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="advertising页面"/>
 </LinearLayout>
