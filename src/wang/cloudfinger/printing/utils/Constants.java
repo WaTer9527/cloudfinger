@@ -1,6 +1,6 @@
 package wang.cloudfinger.printing.utils;
 
-public class Constants {
+public final class Constants {
 
 	public static final String IMAGE_CACHE_PATH = "imageLoader/cache";
 
